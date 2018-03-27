@@ -31,11 +31,11 @@ rp(options)
         username: 'Sikdanbot',
         icon_url: 'https://pbs.twimg.com/profile_images/975638064348327936/26mLY9Qf_400x400.jpg',
         attachments: [{
-          "fallback": "오늘의 식단",
-          "color": "#2196f3",
-          "title": "오늘의 식단",
-          "title_link": "https://bds.bablabs.com/restaurants?campus_id=JEnfpqCUuR",
-          "text": menu,
+          fallback: '오늘의 식단',
+          color: '#2196f3',
+          title: '오늘의 식단',
+          title_link: 'https://bds.bablabs.com/restaurants?campus_id=JEnfpqCUuR',
+          text: menu,
           ts: unixTime(new Date())
         }]
       })
