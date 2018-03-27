@@ -11,9 +11,13 @@ const token = tokens.legacyToken;
 
 const web = new WebClient(token);
 
+const channels = {
+  cs330_os: 'C8FQLB9AP',
+  test_for: 'C02PM7XQ1'
+};
 // This argument can be a channel ID, a DM ID, a MPDM ID, or a group ID
 // const conversationId = 'C8FQLB9AP';
-const conversationId = 'C02PM7XQ1';
+const conversationId = channels.test_for;
 
 var options = {
   uri: 'http://www.kaist.ac.kr/_prog/fodlst/index.php?site_dvs_cd=kr&menu_dvs_cd=050303&dvs_cd=emp&stt_dt=2018-03-27&site_dvs=',
