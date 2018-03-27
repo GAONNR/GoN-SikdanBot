@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@slack/client": "^4.1.0",
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2",
+    "unix-time": "^1.0.1"
+  }
+}
