@@ -11,7 +11,7 @@ const cheerio = require('cheerio');
 const unixTime = require('unix-time');
 const pickRandom = require('pick-random');
 
-const menus = ['마루', '보쌈', '피자', '찜닭', '집돼', '도시락'];
+const menus = ['마루', '보쌈', '피자', '찜닭', '집돼', '도시락', '학식'];
 
 const web = new WebClient(token);
 
