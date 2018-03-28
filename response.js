@@ -16,7 +16,7 @@ const menus = ['마루', '보쌈', '피자', '찜닭', '집돼', '도시락', '�
 const web = new WebClient(token);
 
 var options = {
-  uri: 'http://www.kaist.ac.kr/_prog/fodlst/index.php?site_dvs_cd=kr&menu_dvs_cd=050303&dvs_cd=emp&stt_dt=2018-03-27&site_dvs=',
+  uri: `http://www.kaist.ac.kr/_prog/fodlst/index.php?site_dvs_cd=kr&menu_dvs_cd=050303&dvs_cd=emp&stt_dt=${new Date().toJSON().slice(0,10)}&site_dvs=`,
   transform: function(body) {
     return cheerio.load(body);
   }
