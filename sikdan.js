@@ -16,7 +16,7 @@ const conversationId = channels.test_for;
 rtm.start();
 
 rtm.on('message', function(message) {
-  console.log(message);
+  // console.log(message);
 
   let text = message.text;
   if (text !== undefined) {
