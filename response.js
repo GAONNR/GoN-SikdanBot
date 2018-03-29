@@ -10,6 +10,7 @@ const rp = require('request-promise');
 const cheerio = require('cheerio');
 const unixTime = require('unix-time');
 const gen = require('random-seed');
+const moment = require('moment');
 
 const menus = ['마루', '보쌈', '피자', '찜닭', '집돼', '도시락', '학식', '두메', '교수회관'];
 
@@ -23,7 +24,7 @@ var options = {
 };
 
 function getToday() {
-  return new Date().toJSON().slice(0, 10);
+  return moment().format().slice(0, 10);
 }
 
 function postText(channel, text) {
@@ -70,7 +71,7 @@ module.exports = {
         postAttachments(message.channel, [{
           fallback: '오늘의 식단',
           color: '#2196f3',
-          title: '오늘의 식단',
+          title: `${getToday()}의 식단`,
           title_link: 'https://bds.bablabs.com/restaurants?campus_id=JEnfpqCUuR',
           text: menu,
           ts: unixTime(new Date())
