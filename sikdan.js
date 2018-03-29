@@ -19,10 +19,11 @@ rtm.on('message', function(message) {
   console.log(message);
 
   let text = message.text;
-  if (!text) continue;
-  if (text.includes('저녁') || text.includes('점심')) {
-    response.randomMenu(message);
-  } else if (text.includes('식단')) {
-    response.crawlMenu(message);
+  if (text !== undefined) {
+    if (text.includes('저녁') || text.includes('점심')) {
+      response.randomMenu(message);
+    } else if (text.includes('식단')) {
+      response.crawlMenu(message);
+    }
   }
 });
