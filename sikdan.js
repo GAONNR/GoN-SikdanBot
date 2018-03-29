@@ -20,7 +20,7 @@ rtm.on('message', function(message) {
 
   let text = message.text;
   if (text !== undefined) {
-    if (text.includes('저녁') || text.includes('점심')) {
+    if (text.includes('저녁 추천') || text.includes('점심 추천')) {
       response.randomMenu(message);
     } else if (text.includes('식단')) {
       response.crawlMenu(message);
