@@ -83,6 +83,6 @@ module.exports = {
   },
 
   soraGodung: function(message) {
-    postText(message.channel, `${['응.', '아니.'][gen.create()(2)]}`);
+    postText(message.channel, `${['응.', '아니.', '그만해라.'][gen.create()(3)]}`);
   }
 };
