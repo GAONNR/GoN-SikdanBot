@@ -80,5 +80,9 @@ module.exports = {
       .catch((err) => {
         throw err;
       });
+  },
+
+  soraGodung: function(message) {
+    postText(message.channel, `${['응.', '아니.'][gen.create()(menus.length)]}`);
   }
 };

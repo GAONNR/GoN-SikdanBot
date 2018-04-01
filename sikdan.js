@@ -24,6 +24,8 @@ rtm.on('message', function(message) {
       response.randomMenu(message);
     } else if (text.includes('식단')) {
       response.crawlMenu(message);
+    } else if (text.includes('마법의 ')) {
+      response.soraGodung(message);
     }
   }
 });
