@@ -13,6 +13,7 @@ const gen = require('random-seed');
 const moment = require('moment');
 
 const menus = ['마루', '보쌈', '피자', '찜닭', '집돼', '도시락', '학식', '두메', '교수회관'];
+const yasik = ['대학생', '큰통', '불닭', '왕큰손', '강기막', 'BBQ', '마시내'];
 
 const web = new WebClient(token);
 
@@ -60,11 +61,18 @@ function postAttachments(channel, attachments) {
 module.exports = {
   randomMenu: function(message) {
     let today = new Date().toJSON().slice(0, 10);
-    postText(message.channel, `나같으면 ${menus[gen.create(getToday())(menus.length)]} 먹는다`);
+    postText(message.channel,
+      `나같으면 ${menus[gen.create(getToday())(menus.length)]} 먹는다`);
   },
 
+  randomYasik: function(message) {
+    postText(message.chaanel,
+      `나같으면 ${yasik[gen.create()(yasik.length)]} 먹는다`);
+  }
+
   crawlMenu: function(message) {
-    options.uri = `http://www.kaist.ac.kr/_prog/fodlst/index.php?site_dvs_cd=kr&menu_dvs_cd=050303&dvs_cd=emp&stt_dt=${getToday()}&site_dvs=`;
+    options.uri =
+      `http://www.kaist.ac.kr/_prog/fodlst/index.php?site_dvs_cd=kr&menu_dvs_cd=050303&dvs_cd=emp&stt_dt=${getToday()}&site_dvs=`;
     rp(options)
       .then(($) => {
         let menu = $($('.menuTb').find('td').get(1)).text().trim();

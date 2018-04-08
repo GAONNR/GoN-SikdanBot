@@ -22,6 +22,8 @@ rtm.on('message', function(message) {
   if (text !== undefined) {
     if (text.includes('저녁 추천') || text.includes('점심 추천')) {
       response.randomMenu(message);
+    } else if (text.includes('야식 추천')) {
+      response.randomYasik(message);
     } else if (text.includes('식단')) {
       response.crawlMenu(message);
     } else if (text.includes('마법의 ')) {
