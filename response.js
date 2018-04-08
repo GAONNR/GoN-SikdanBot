@@ -66,7 +66,7 @@ module.exports = {
   },
 
   randomYasik: function(message) {
-    postText(message.chaanel,
+    postText(message.channel,
       `나같으면 ${yasik[gen.create()(yasik.length)]} 먹는다`);
   },
 
