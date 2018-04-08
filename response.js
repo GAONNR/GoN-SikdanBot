@@ -68,7 +68,7 @@ module.exports = {
   randomYasik: function(message) {
     postText(message.chaanel,
       `나같으면 ${yasik[gen.create()(yasik.length)]} 먹는다`);
-  }
+  },
 
   crawlMenu: function(message) {
     options.uri =
