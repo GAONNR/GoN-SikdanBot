@@ -95,11 +95,11 @@ module.exports = {
     let textTokens = text.match(/\S+/g);
     let username = textTokens[textTokens.indexOf('마법의') + 1];
 
-    if (text.include('며우긔')) {
+    if (text.includes('며우긔')) {
       postText(message.channel, '그만해라.', username);
-    } else if (text.include('잘못')) {
+    } else if (text.includes('잘못')) {
       postText(message.channel, '응.', username);
-    } else if (text.include('잘')) {
+    } else if (text.includes('잘')) {
       postText(message.channel, '아니.', username);
     } else {
       postText(message.channel,
