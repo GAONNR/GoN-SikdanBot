@@ -32,7 +32,7 @@ function postText(channel, text, username = 'Sikdanbot') {
   web.chat.postMessage({
       channel: channel,
       as_user: false,
-      username: 'Sikdanbot',
+      username: username,
       icon_url: 'https://pbs.twimg.com/profile_images/975638064348327936/26mLY9Qf_400x400.jpg',
       text: text
     })
