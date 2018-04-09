@@ -28,7 +28,7 @@ function getToday() {
   return moment().format().slice(0, 10);
 }
 
-function postText(channel, text) {
+function postText(channel, text, username = 'Sikdanbot') {
   web.chat.postMessage({
       channel: channel,
       as_user: false,
@@ -92,14 +92,18 @@ module.exports = {
 
   soraGodung: function(message) {
     let text = message.text;
-    if (text.include('며우긔')){
-      postText(message.channel, `그만해라.`)
-    } else if (text.include('잘못')){
-      postText(message.channel, `응.`)
-    } else if (text.include('잘')){
-      postText(message.channel, `아니.`)
+    let textTokens = text.match(/\S+/g);
+    let username = textTokens[textTokens.indexOf('마법의') + 1];
+
+    if (text.include('며우긔')) {
+      postText(message.channel, '그만해라.', username);
+    } else if (text.include('잘못')) {
+      postText(message.channel, '응.', username);
+    } else if (text.include('잘')) {
+      postText(message.channel, '아니.', username);
     } else {
-      postText(message.channel, `${['응.', '아니.', '그만해라.'][gen.create()(3)]}`);
+      postText(message.channel,
+        `${['응.', '아니.', '그만해라.'][gen.create()(3)]}`, username);
     }
   }
 };
