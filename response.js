@@ -91,6 +91,15 @@ module.exports = {
   },
 
   soraGodung: function(message) {
-    postText(message.channel, `${['응.', '아니.', '그만해라.'][gen.create()(3)]}`);
+    let text = message.text;
+    if (text.include('며우긔')){
+      postText(message.channel, `그만해라.`)
+    } else if (text.include('잘못')){
+      postText(message.channel, `응.`)
+    } else if (text.include('잘')){
+      postText(message.channel, `아니.`)
+    } else {
+      postText(message.channel, `${['응.', '아니.', '그만해라.'][gen.create()(3)]}`);
+    }
   }
 };
