@@ -28,12 +28,15 @@ function getToday() {
   return moment().format().slice(0, 10);
 }
 
-function postText(channel, text, username = 'Sikdanbot') {
+function postText(channel,
+  text,
+  username = 'Sikdanbot',
+  icon_url = 'https://pbs.twimg.com/profile_images/975638064348327936/26mLY9Qf_400x400.jpg') {
   web.chat.postMessage({
       channel: channel,
       as_user: false,
       username: username,
-      icon_url: 'https://pbs.twimg.com/profile_images/975638064348327936/26mLY9Qf_400x400.jpg',
+      icon_url: icon_url,
       text: text
     })
     .then((res) => {
@@ -104,6 +107,19 @@ module.exports = {
     } else {
       postText(message.channel,
         `${['응.', '아니.', '그만해라.'][gen.create()(3)]}`, username);
+    }
+  },
+
+  randomChoice: function(message) {
+    let text = message.text;
+    let textTokens = text.match(/\S+/g);
+
+    if (textTokens[0] === '!랜덤') {
+      let choices = textTokens.slice(1, choices.length);
+      postText(message.channel,
+        `하와와.... 랜덤봇쟝의 추천은 ${choices[gen.create()(choices.length)]} 인 거시에요....`,
+        '랜덤봇쟝',
+        'http://kstatic.inven.co.kr/upload/2018/01/16/bbs/i15972757430.jpg');
     }
   }
 };

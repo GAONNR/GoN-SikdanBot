@@ -28,6 +28,8 @@ rtm.on('message', function(message) {
       response.crawlMenu(message);
     } else if (text.includes('마법의 ')) {
       response.soraGodung(message);
+    } else if (text.includes('!랜덤 ')) {
+      response.randomChoice(message);
     }
   }
 });
