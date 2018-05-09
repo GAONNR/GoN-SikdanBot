@@ -117,7 +117,7 @@ module.exports = {
     if (textTokens[0] === '!랜덤') {
       let choices = textTokens.slice(1, textTokens.length);
       postText(message.channel,
-        `하와와.... 랜덤봇쟝의 추천은 ${choices[gen.create()(choices.length)]} 인 거시에요....`,
+        `하와와.... 랜덤봇쟝의 추천은 ${choices[gen.create()(choices.length)]}인 거시에요....`,
         '랜덤봇쟝',
         'http://kstatic.inven.co.kr/upload/2018/01/16/bbs/i15972757430.jpg');
     }
