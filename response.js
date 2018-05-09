@@ -115,7 +115,7 @@ module.exports = {
     let textTokens = text.match(/\S+/g);
 
     if (textTokens[0] === '!랜덤') {
-      let choices = textTokens.slice(1, choices.length);
+      let choices = textTokens.slice(1, textTokens.length);
       postText(message.channel,
         `하와와.... 랜덤봇쟝의 추천은 ${choices[gen.create()(choices.length)]} 인 거시에요....`,
         '랜덤봇쟝',
