@@ -119,7 +119,7 @@ module.exports = {
       postText(message.channel,
         `하와와.... 랜덤봇쟝의 추천은 ${choices[gen.create()(choices.length)]}인 거시에요....`,
         '랜덤봇쟝',
-        'http://kstatic.inven.co.kr/upload/2018/01/16/bbs/i15972757430.jpg');
+        'https://lh4.googleusercontent.com/UpHpuL11BVthl-DPAeJ20qlFV6sppp-Gk7wfw0evb-y8Yzf4VycdeDpbvqvb1B3TK33fDnqPwF8v03S4xacZ=w2880-h1800');
     }
   }
 };
