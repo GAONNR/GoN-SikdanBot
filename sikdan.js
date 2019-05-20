@@ -30,6 +30,8 @@ rtm.on('message', function(message) {
       response.soraGodung(message);
     } else if (text.includes('!랜덤 ')) {
       response.randomChoice(message);
+    } else if (text == '가온') {
+      response.noGaon(message);
     }
   }
 });

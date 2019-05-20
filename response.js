@@ -119,7 +119,14 @@ module.exports = {
       postText(message.channel,
         `하와와.... 랜덤봇쟝의 추천은 ${choices[gen.create()(choices.length)]}인 거시에요....`,
         '랜덤봇쟝',
-        'https://lh4.googleusercontent.com/UpHpuL11BVthl-DPAeJ20qlFV6sppp-Gk7wfw0evb-y8Yzf4VycdeDpbvqvb1B3TK33fDnqPwF8v03S4xacZ=w2880-h1800');
+        'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/59/5955c11d066b3f95c57e82a5388b2183cdfaa13e_full.jpg');
     }
+  },
+
+  noGaon: function(message) {
+    postText(message.channel,
+      '가온 쓰지 마세요',
+      '가온쓰지마세요',
+      'https://pbs.twimg.com/media/C05wnnkUcAINUKw.jpg');
   }
 };
