@@ -32,6 +32,8 @@ rtm.on('message', function(message) {
       response.randomChoice(message);
     } else if (text == '가온') {
       response.noGaon(message);
+    } else if (text.includes('random.choice(')) {
+      response.pyrandomChoice(message);
     }
   }
 });

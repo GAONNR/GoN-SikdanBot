@@ -190,5 +190,26 @@ module.exports = {
       '가온쓰지마세요',
       'https://pbs.twimg.com/media/C05wnnkUcAINUKw.jpg'
     );
+  },
+
+  pyrandomChoice: function(message) {
+    let reg = /(["'])(?:(?=(\\?))\2.)*?\1/g;
+    let tokens = message.text.match(reg);
+    if (tokens != null) {
+      postText(
+        message.channel,
+        `하와와.... 랜덤봇쟝의 추천은 ${tokens[gen.create()(tokens.length)]}인 거시에요....`,
+        '랜덤봇쟝',
+        'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/59/5955c11d066b3f95c57e82a5388b2183cdfaa13e_full.jpg'
+      );
+    }
+    else {
+      postText(
+        message.channel,
+        '하와와.... 뻘짓하지 않는 거시에요....',
+        '랜덤봇쟝',
+        'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/59/5955c11d066b3f95c57e82a5388b2183cdfaa13e_full.jpg'
+      );
+    }
   }
 };
